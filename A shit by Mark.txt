@@ -1,0 +1,10 @@
+http://www.trypython.org
+
+
+def enc(s) :
+	r = "\\%s" % hex(len(s))[1:]
+	for i in xrange(0, len(s)) :
+		r = r + "\\%s" % hex(ord(s[len(s) - i - 1]) ^ 0x4B)[1:]
+	return r
+
+print enc("OLLYDBG")

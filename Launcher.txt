@@ -1,0 +1,9 @@
+::::MAIET's original::::
+SHR DL, 5
+SHL AL, 3
+^ = Decryption
+
+::::Edited::::
+SHR DL, 6
+SHL AL, 4
+^ = Decrpytion

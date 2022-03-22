@@ -1,0 +1,102 @@
+system/worlditem.xml
+
+<!-- ??? ???? ?? ??? -->
+<WORLDITEM id="205" name="blueflag"> <!-- id? ??? ??? ??? ??. -->
+<TYPE>flag</TYPE>
+<TIME>5000</TIME>
+<MODELNAME>blueflag</MODELNAME>
+</WORLDITEM>
+
+<!-- ??? ???? ?? ??? -->
+<WORLDITEM id="206" name="redflag"> <!-- id? ??? ??? ??? ??. -->
+<TYPE>flag</TYPE>
+<TIME>5000</TIME>
+<MODELNAME>redflag</MODELNAME>
+</WORLDITEM>
+
+<!-- ?? -->
+<AddWorldItemElu name ="portal">
+<AddBaseModel name ="portal" filename="model/worlditem/ef_portal.elu"/>
+<AddAnimation name="play" filename="model/worlditem/ef_portal.elu.ani" motion_type="0" motion_loop_type="loop" />
+</AddWorldItemElu> 
+<AddWorldItemElu name ="redflag">
+<AddBaseModel name ="redflag" filename="model/worlditem/ef_ctf_r.elu"/>
+<AddAnimation name="play" filename="model/worlditem/ef_ctf.elu.ani" motion_type="0" motion_loop_type="loop" />
+</AddWorldItemElu> 
+<AddWorldItemElu name ="blueflag">
+<AddBaseModel name ="blueflag" filename="model/worlditem/ef_ctf_b.elu"/>
+<AddAnimation name="play" filename="model/worlditem/ef_ctf.elu.ani" motion_type="0" motion_loop_type="loop" />
+</AddWorldItemElu>
+
+interface/default/combat/screeneffects.xml
+
+
+<AddEffectElu name="ctf_flagdrop_b">
+<AddBaseModel name="ctf_flagdrop_b" filename="ctf_flagdrop_b.elu" />
+<AddAnimation name="play" filename="ctf_flagdrop.elu.ani" motion_type="0" motion_loop_type="lastframe" />
+</AddEffectElu>
+<AddEffectElu name="ctf_flagdrop_r">
+<AddBaseModel name="ctf_flagdrop_r" filename="ctf_flagdrop_r.elu" />
+<AddAnimation name="play" filename="ctf_flagdrop.elu.ani" motion_type="0" motion_loop_type="lastframe" />
+</AddEffectElu>
+
+<AddEffectElu name="ctf_taken_b">
+<AddBaseModel name="ctf_taken_b" filename="ctf_taken_b.elu" />
+<AddAnimation name="play" filename="ctf_taken.elu.ani" motion_type="0" motion_loop_type="lastframe" />
+</AddEffectElu>
+<AddEffectElu name="ctf_taken_r">
+<AddBaseModel name="ctf_taken_r" filename="ctf_taken_r.elu" />
+<AddAnimation name="play" filename="ctf_flagdrop.elu.ani" motion_type="0" motion_loop_type="lastframe" />
+</AddEffectElu>
+
+<AddEffectElu name="ctf_score_b">
+<AddBaseModel name="ctf_score_b" filename="ctf_score_b.elu" />
+<AddAnimation name="play" filename="ctf_score.elu.ani" motion_type="0" motion_loop_type="lastframe" />
+</AddEffectElu>
+<AddEffectElu name="ctf_score_r">
+<AddBaseModel name="ctf_score_r" filename="ctf_score_r.elu" />
+<AddAnimation name="play" filename="ctf_score.elu.ani" motion_type="0" motion_loop_type="lastframe" />
+</AddEffectElu>
+
+<AddEffectElu name="ctf_splash">
+<AddBaseModel name="ctf_splash" filename="ctf_splash.elu" />
+<AddAnimation name="play" filename="ctf_splash.elu.ani" motion_type="0" motion_loop_type="lastframe" />
+</AddEffectElu>
+
+
+MatchServer/Maps/Mansion/spawn.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<XML>
+<GAMETYPE id="solo">
+<SPAWN item="blueflag" timesec="5000">
+<POSITION>-5423.1645508 -1336.1931152 704.1063843</POSITION>
+</SPAWN>
+<SPAWN item="redflag" timesec="5000">
+<POSITION>4799.7851563 -790.5439453 601.9998169</POSITION>
+</SPAWN> 
+</GAMETYPE><GAMETYPE id="team">
+<SPAWN item="blueflag" timesec="5000">
+<POSITION>-5423.1645508 -1336.1931152 704.1063843</POSITION>
+</SPAWN>
+<SPAWN item="redflag" timesec="5000">
+<POSITION>4799.7851563 -790.5439453 601.9998169</POSITION>
+</SPAWN> 
+</GAMETYPE>
+</XML>
+
+
+Map.xml
+<MAP id="0" MapName ="Mansion" MapImageName= "map_Mansion.bmp" BannerName = "banner_Mansion.tga" ExpRatio ="1" MaxPlayers ="16" bIsCTFMap = "true"></MAP>
+
+
+SFX->Effect_list.xml
+
+    <AddEffectElu name="capturer">
+        <AddBaseModel name="capturer" filename="ef_ctfr.elu" />
+        <AddAnimation name="play" filename="ef_ctf.elu.ani" motion_type="0" motion_loop_type="loop" />
+    </AddEffectElu>    
+    <AddEffectElu name="captureb">
+        <AddBaseModel name="captureb" filename="ef_ctfb.elu" />
+        <AddAnimation name="play" filename="ef_ctf.elu.ani" motion_type="0" motion_loop_type="loop" />
+    </AddEffectElu>  

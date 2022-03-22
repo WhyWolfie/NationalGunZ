@@ -1,0 +1,3 @@
+Account -> VIPWalls, LastVIPWall 
+Datatype -> int
+Default Value or binding -> 0

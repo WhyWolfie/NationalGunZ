@@ -1,0 +1,1 @@
+UPDATE Item SET IsCashItem = 0

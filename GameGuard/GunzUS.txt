@@ -1,0 +1,8 @@
+// client
+GameGuard.des
+GunzUSTest.ini  //GunzUS.ini
+
+
+// server
+ggauth.dll
+ggsrvdll.dll
